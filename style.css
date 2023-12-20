@@ -1,0 +1,35 @@
+* {
+    box-sizing: 1px;
+    border: 1px solid red;
+}
+
+header {
+    display: block;
+}
+
+section {
+    display: block;
+    margin-left: 500px;
+}
+
+.board-wrapper {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    justify-items: stretch;
+}
+
+.o {
+    max-width: 80%;
+    max-height: 80%;
+    border-image: stretch;
+    align-self: center;
+    position: fixed;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
