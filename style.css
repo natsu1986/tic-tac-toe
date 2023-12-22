@@ -1,10 +1,17 @@
-* {
+/** {
     box-sizing: 1px;
     border: 1px solid red;
+}*/
+
+body {
+    background-image: url("images/wooden.jpg");
 }
+
+
 
 header {
     display: block;
+    text-align: center;
 }
 
 section {
@@ -20,16 +27,98 @@ section {
     justify-items: stretch;
 }
 
-.o {
+/* .o {
     max-width: 80%;
     max-height: 80%;
     border-image: stretch;
     align-self: center;
-    position: fixed;
-}
+    position: relative;
+    object-fit: cover;
+} */
 
 img {
     width: 200px;
     height: 200px;
     object-fit: cover;
+    border-color: black;
+    border-radius: 50px;
+}
+
+.player1-score{
+    font-size: 100px;
+    font-weight: 200;
+    margin-top: 50px;
+}
+
+.player2-score{
+    font-size: 100px;
+    font-weight: 200;
+    margin-top: 50px;
+}
+
+.rotate-scale-up {
+	-webkit-animation: rotate-scale-up 0.65s linear both;
+	        animation: rotate-scale-up 0.65s linear both;
+}
+
+
+@keyframes rotate-scale-up {
+    0% {
+      -webkit-transform: scale(1) rotateZ(0);
+              transform: scale(1) rotateZ(0);
+    }
+    50% {
+      -webkit-transform: scale(2) rotateZ(180deg);
+              transform: scale(2) rotateZ(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateZ(360deg);
+              transform: scale(1) rotateZ(360deg);
+    }
+}
+
+.swing-top-fwd {
+	-webkit-animation: swing-top-fwd 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: swing-top-fwd 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes swing-top-fwd {
+    0% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+    100% {
+      -webkit-transform: rotateX(180deg);
+              transform: rotateX(180deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  
+.swing-bottom-fwd {
+	-webkit-animation: swing-bottom-fwd 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: swing-bottom-fwd 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes swing-bottom-fwd {
+    0% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+      -webkit-transform-origin: bottom;
+              transform-origin: bottom;
+    }
+    100% {
+      -webkit-transform: rotateX(-180deg);
+              transform: rotateX(-180deg);
+      -webkit-transform-origin: bottom;
+              transform-origin: bottom;
+    }
+  }
+  
+.player-win{
+    font-size: 100px;
+    font-weight: 200;
+    margin-top: 50px;
 }
